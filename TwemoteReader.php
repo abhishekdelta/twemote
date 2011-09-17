@@ -1,8 +1,12 @@
 <?php
 /**
  * @package Twemote
+ * @author Akash Chauhan <akash6190 [at] gmail [dot] com>
  * @copyright Hackersquad (Refer README for details)
  * @description Fetches the latest direct messages to the user's twitter account and calls the TwemoteManager to handle the command.
+ * TODO: 
+ *	Automate the installation process for the user...
+ *	Security Issues need to work upon
  */
 require_once(__DIR__.'/common.php');
 
