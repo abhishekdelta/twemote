@@ -1,0 +1,40 @@
+#!/bin/bash
+# @package Twemote
+# @copyright Hackersquad (Refer README for details)
+# @author Akash Chauhan <akash6190 [at] gmail [dot] com>
+# @description Twemote service.
+# @usage sudo /etc/init.d/twemote start
+
+### BEGIN INIT INFO
+# Provides:             twemote
+### END INIT INFO
+
+NAME=twemote
+DESC=twemote
+PIDFILE=/var/run/$NAME.pid
+SH=/bin/bash
+DIR=/var/www/workspace/openhack
+
+case "$1" in
+  start)
+        echo -n "Starting $DESC: "
+        start-stop-daemon -S -b -m -p $PIDFILE --exec $SH $DIR/service.sh &
+        echo "$NAME."
+        ;;
+  restart)
+        ;;
+  stop)
+        echo -n "Stopping $DESC: "
+        start-stop-daemon --stop --quiet --oknodo --pidfile $PIDFILE
+        echo "$NAME."
+        rm -f $PIDFILE
+        ;;
+  status)
+        ;;
+  *)
+        N=/etc/init.d/$NAME
+        echo "Usage: $N {start|stop|restart|force-reload|status}" >&2
+        ;;
+esac
+
+exit 0

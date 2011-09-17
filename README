@@ -1,0 +1,72 @@
+::: TWEMOTE :::
+
+Twemote is a lightweight software to control your computer remotely via sms. Not just controlling but even use your computer to do tasks for you and send back the result to your mobile via sms!
+
+::: Credits :::
+Team Hackersquad -
+			Abhishek Shrivastava <i.abhi27 [at] gmail.com>
+			Akash Chauhan <akash6190 [at] gmail.com>
+			Sumit Ranjan <sumit.nitt [at] gmail.com>
+			Jithin K. Rajeev <jithinkr [at] gmail.com>
+
+::: License :::
+GNU GPL v3.0
+View the LICENSE file for detailed info.
+
+::: Highlights :::
+
+'Twemote' is Twitter Remote. It provides a user who has access to only SMS, the power to control his computer and use it to access the Internet and forward the results to his/her mobile phone, on the fly! This is especially useful for people with mobile phones, but no support/connectivity for GPRS and Internet, to :
+
+* fetch information from his computer by browsing and viewing files and folders,
+* send emails to his friends and colleagues with attachments that are stored in his computer,
+* get directions from google maps,
+* obtain stock information,
+* check cricket scores, 
+* find dictionary meaning of words, and much more.
+
+::: WORKING ::
+
+The user simply needs to send a Twitter Direct Message to his twitter account via mobile sms. A server running on his home computer will then fetch the tweet using YQL and perform the necessary actions and send the response via SMS back to the user. We've used APIs provided by Wordnik, Google Maps and Yahoo Finance. We used YQL for fetching Twitter direct messages and Scores. The rest of the server is coded in PHP and can be easily installed on any computer. 
+
+::: Requirements :::
+Unix-based OS
+Webserver with PHP 5+
+Python 2.7+
+Internet (duh!)
+
+::: Installation :::
+* Extract the code
+* Create an account on Indyarocks.com if you haven't already. 
+* You'll also need atleast one of GMAIL or YAHOO account if you want to use the email feature.
+* You must have a Twitter account with registered mobile number, and you should generate your Twitter Access Tokens. Google for more details.
+* Edit config.ini and fill the information required ONLY where "<Something>" appears. DO NOT EDIT ANY OTHER LINES.
+* Now execute "sh twemote.sh"
+* You're Twemote is ready!
+
+::: Usage :::
+
+Using your registered mobile, send an SMS to TWITTER with one of the following contents:
+
+#browse cd <path>
+#browse ls
+#browse cat <filename>
+#browse head <filename>
+#browse tail <filename>
+#browse line <filename> <line no.>
+#browse range <filename> <start line no.> <end line no.>
+
+#route #src <source address> #dest <destination address>
+
+#email s <from email> <to email> [attach <filename>]
+
+#stocks <comma-separated list of company codes>
+
+#dictionary <word>
+
+#cricket
+
+Note : You can also use the following shorthands : #br instead of #browse, #dict instead of #dictionary, #em instead of #email, #cric instead of #cricket.
+
+Now what result your command generated will be sent as an SMS to your mobile.
+
+

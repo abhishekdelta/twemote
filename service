@@ -1,0 +1,6 @@
+#!/bin/bash
+while [ 1 ]
+do
+	php /var/www/workspace/openhack/TwemoteReader.php > /dev/null
+	sleep 2
+done
