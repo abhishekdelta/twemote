@@ -6,7 +6,7 @@
  * @description Fetches the latest direct messages to the user's twitter account and calls the TwemoteManager to handle the command.
  * TODO: 
  *	Automate the installation process for the user...
- *	Security Issues need to work upon
+ *	Security Issues need to work upon (have to apply OAuth)
  */
 require_once(__DIR__.'/common.php');
 
